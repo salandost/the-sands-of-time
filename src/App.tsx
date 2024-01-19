@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import TimerInput from './components/TimeInput';
+import SandClock from './components/SandClock';
 
 function App() {
   return (
@@ -7,7 +9,10 @@ function App() {
       <header className="app-header">
         The Sands of Time
       </header>
-      <div className='app-content'></div>
+      <div className='app-content'>
+        <SandClock />
+        <TimerInput />
+      </div>
     </div>
   );
 }

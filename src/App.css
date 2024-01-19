@@ -5,7 +5,7 @@
 
 .app-header {
   background-color: #282c34;
-  min-height: 10vh;
+  min-height: 7vh;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -14,5 +14,66 @@
 }
 
 .app-content {
-  height: 90vh;
+  height: 93vh;
+}
+
+/* SandClock component */
+.hourglassContainer {
+  position: relative;
+  height: 400px;
+}
+
+.hourglassContainer img {
+  height: 400px;
+  width: 280px;
+  position: relative;
+  z-index: 1;
+}
+
+.topSand {
+  position: absolute;
+  bottom: 200px;
+  left: calc( 50% - 80px );
+  width: 160px;
+  height: 150px;
+  background-color: sandybrown;
+}
+
+.bottomSand {
+  position: absolute;
+  bottom: 50px;
+  left: calc( 50% - 80px );
+  width: 160px;
+  /* height: 150px; */
+  background-color: sandybrown;
+}
+
+.sandStream {
+  position: absolute;
+  top: 200px;
+  left: calc(50% - 8px);
+  height: 200px;
+  width: 16px;
+  background-size: 100%;
+  background-repeat: repeat-y;
+  background-position-x: center;
+  animation: move_stream 100s linear infinite;
+}
+
+@keyframes move_stream {
+  0% {
+      background-position-y: 0;
+  }
+
+  100% {
+      background-position-y: 10000px;
+  }
+}
+
+/* TimeInput component */
+.timeInputContainer input[type="time"] {
+  width: 280px;
+  height: 30px;
+  /* padding-left: 10px; */
+  text-align: center;
 }
